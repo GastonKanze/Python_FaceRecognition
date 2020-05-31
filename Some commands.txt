@@ -1,0 +1,17 @@
+Testing the Python library face_recognition 
+
+To use face_recognition you need to run in the terminal in your project folder:
+    - Set up a virtual environment: pip install pipenv
+    - Start the virtual environment: pipenv shell
+    - pipenv install face_recognition
+
+A description of the folders:
+    - img/groups: Groups of people
+    - img/known: You have images with the name of the person, with these images we match the images of the unknown folder.
+    - img/unknown: Images of uknown people
+
+Terminal commands:
+face_recognition ./img/known ./img/unknown -> You can match the images (You see the names of the images)
+face_recognition  --show-distance true ./img/known ./img/unknown -> the higher the value, the greater the similarity
+face_recognition ./img/known ./img/unknown | cut -d ',' -f2 -> To show only the name
+
